@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := all
-SHELL := /bin/bash
+SHELL := /usr/bin/env bash
 
 ## Temporary hack to re-build `dummy` C targets every time
 .PHONY: dummy dummy2 dummy_works dummy_pie

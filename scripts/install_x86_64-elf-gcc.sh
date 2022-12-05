@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 ### This script builds and installs GCC and binutils that are cross-compiled to target Theseus on x86_64. 

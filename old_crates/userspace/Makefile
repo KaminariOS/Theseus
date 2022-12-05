@@ -1,4 +1,4 @@
-SHELL := /bin/bash
+SHELL := /usr/bin/env bash
 USERSPACE_BUILD_DIR ?= $(shell pwd)/build
 export  # export this to Makefiles in subdirectories
 

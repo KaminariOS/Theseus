@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 ### This script is invoked from the Theseus top-level Makefile, using 'make build_server',

@@ -1,7 +1,7 @@
 ### This makefile is the top-level build script that builds all the crates in subdirectories 
 ### and combines them into the final OS .iso image.
 ### It also provides convenient targets for running and debugging Theseus and using GDB on your host computer.
-SHELL := /bin/bash
+SHELL := bash
 
 ## Disable parallelism for this Makefile since it breaks the build,
 ## as our dependencies aren't perfectly specified for each target.
@@ -88,12 +88,12 @@ RUSTC_VERSION := $(shell cat rust-toolchain)
 check-rustc:
 ## Building Theseus requires the 'rust-src' component. If we can't install that, install the required rust toolchain and retry.
 ## If it still doesn't work, issue an error, since 'rustup' is probably missing.
-	@rustup component add rust-src || (rustup toolchain install $(RUSTC_VERSION) && rustup component add rust-src) || \
-	(\
-		echo -e "\nError: 'rustup' isn't installed.";\
-		echo -e "Please install rustup and try again.\n";\
-		exit 1 \
-	)
+ #@rustup component add rust-src || (rustup toolchain install $(RUSTC_VERSION) && rustup component add rust-src) || \
+	#(\
+		#echo -e "\nError: 'rustup' isn't installed.";\
+		#echo -e "Please install rustup and try again.\n";\
+		#exit 1 \
+	#)
 
 
 
